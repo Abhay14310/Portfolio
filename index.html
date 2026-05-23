@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Abhay Kapoor &mdash; Full Stack Developer &amp; MCA Student | MERN Stack, Docker, Computer Vision"/>
+<title>Abhay Kapoor | Full Stack Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="styles.css"/>
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Abhay Kapoor</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Journey</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:abhaykapoor.008@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- Terrain / Village silhouette -->
+  <svg class="hero-terrain" viewBox="0 0 1440 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mountains far back -->
+    <path d="M0,200 L80,120 L160,170 L240,90 L320,150 L400,80 L480,140 L560,100 L640,160 L720,85 L800,145 L880,95 L960,155 L1040,100 L1120,150 L1200,90 L1280,140 L1360,110 L1440,160 L1440,260 L0,260Z" fill="#0a0805" opacity=".95"/>
+    <!-- CoC village silhouette - towers/buildings -->
+    <path d="M0,230 L60,230 L60,195 L70,195 L70,185 L80,185 L80,195 L90,195 L90,230 L150,230 L150,210 L155,200 L160,210 L160,230 L200,230 L200,220 L205,205 L210,220 L210,230 L260,230 L260,200 L265,190 L270,200 L270,230 L340,230 L340,215 L345,200 L355,200 L360,215 L360,230 L400,230 L400,210 L410,195 L420,210 L420,230 L480,230 L480,195 L490,185 L500,185 L510,195 L510,230 L560,230 L560,210 L565,200 L570,210 L570,230 L650,230 L650,215 L660,205 L670,215 L670,230 L740,230 L740,200 L745,190 L750,200 L750,230 L830,230 L830,210 L840,195 L850,210 L850,230 L900,230 L900,215 L910,205 L920,215 L920,230 L1000,230 L1000,200 L1010,188 L1015,188 L1025,200 L1025,230 L1100,230 L1100,210 L1110,195 L1120,210 L1120,230 L1200,230 L1200,215 L1210,205 L1220,215 L1220,230 L1300,230 L1300,200 L1310,190 L1320,200 L1320,230 L1440,230 L1440,260 L0,260Z" fill="#130f0a" opacity=".98"/>
+    <!-- Ground -->
+    <path d="M0,248 C360,235 720,250 1080,240 C1260,235 1380,245 1440,248 L1440,260 L0,260Z" fill="#0d0a07"/>
+  </svg>
+
+  <div style="position:relative;z-index:2;text-align:center;padding:0 2rem">
+    <div class="hero-tag">&#9876; Full Stack Developer &#9876;</div>
+    <h1 class="hero-name">
+      <span class="gold-line">Abhay</span>
+      Kapoor
+    </h1>
+    <p class="hero-title">
+      <span class="hl">MERN Stack</span> &nbsp;&middot;&nbsp; <span class="hl2">Docker</span> &nbsp;&middot;&nbsp; <span class="hl">Computer Vision</span><br/>
+      MCA @ Ravenshaw University &nbsp;&middot;&nbsp; Three.js
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-gold">View My Work</a>
+      <a href="https://github.com/Abhay14310" target="_blank" class="btn-stone">GitHub &#8599;</a>
+      <a href="https://www.linkedin.com/in/abhaykapoor2811" target="_blank" class="btn-stone">LinkedIn   &#8599;</a>
+      <a href="mailto:abhaykapoor.008@gmail.com" class="btn-stone">Hire Me &rarr;</a>
+    </div>
+  </div>
+
+  <div class="venture-forth">
+    Venture Forth
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- CHARACTER SHEET (ABOUT) -->
+<section id="about">
+  <div class="s-wrap">
+    <span class="s-pre">About</span>
+    <div class="s-head">CHARACTER<br/><span class="hi">SHEET</span></div>
+
+    <div class="char-sheet reveal">
+      <div>
+        <div class="char-portrait">
+          <img src="/profile.jpg" alt="Abhay Kapoor" class="char-photo"/>
+          <div class="char-name-plate">
+            <div class="cn">Abhay Kapoor</div>
+            <div class="ct">Full Stack Developer</div>
+          </div>
+          <div class="char-lv">MCA &middot; 8.75 CGPA</div>
+        </div>
+        <div class="char-stats">
+          <div class="cstat"><div class="cstat-n">3+</div><div class="cstat-l">Projects</div></div>
+          <div class="cstat"><div class="cstat-n">8.75</div><div class="cstat-l">CGPA</div></div>
+          <div class="cstat"><div class="cstat-n">3&times;</div><div class="cstat-l">Champion</div></div>
+        </div>
+      </div>
+
+      <div class="char-info">
+        <h3>Hi, I'm Abhay &#128075;</h3>
+        <p>I'm a Master's student in Computer Applications at Ravenshaw University, Cuttack &mdash; currently maintaining an 8.75 CGPA. I build full-stack web applications and have a deep passion for immersive web technologies, real-time systems, and computer vision.</p>
+        <p>My most ambitious project, <strong style="color:var(--gold)">Tasuke'26</strong>, is a multi-domain SaaS platform leveraging MERN, Docker, Socket.IO, Redis, and an advanced computer vision pipeline with sub-150ms latency. I also successfully defended a research thesis on Immersive Web Technologies.</p>
+        <p>Outside of code, I've won the University Badminton Championship three consecutive times &#127992; and represented my university in cricket.</p>
+
+        <div class="char-section">
+          <h4>Core Skills</h4>
+          <div class="skill-pills" id="skill-pills"></div>
+        </div>
+
+        <div class="char-section">
+          <h4>Connect</h4>
+          <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.5rem">
+            <a href="https://github.com/Abhay14310" target="_blank" class="pill gold">GitHub</a>
+            <a href="https://linkedin.com/in/" target="_blank" class="pill gold">LinkedIn</a>
+            <a href="mailto:abhaykapoor.008@gmail.com" class="pill gold">Email</a>
+            <span class="pill">+91-934-897-4276</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="battlement-div" style="background:var(--bg2)">
+  <div class="battlement-icon">Quests</div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="s-wrap" style="padding-bottom:0">
+    <span class="s-pre">Selected Works</span>
+    <div class="s-head">MY<br/><span class="hi">PROJECTS</span></div>
+  </div>
+  <div class="s-wrap" style="padding-top:0">
+    <div class="proj-grid" id="proj-grid"></div>
+  </div>
+</section>
+
+<div class="battlement-div" style="background:var(--bg)">
+  <div class="battlement-icon">Skills</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="s-wrap">
+    <span class="s-pre">Abilities &amp; Tools</span>
+    <div class="s-head">TECH<br/><span class="ci">ARSENAL</span></div>
+    <table class="sk-table" id="sk-table"></table>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="s-wrap">
+    <span class="s-pre">Career Path</span>
+    <div class="s-head">MY<br/><span class="hi">JOURNEY</span></div>
+    <div class="exp-list" id="exp-list"></div>
+  </div>
+</section>
+
+<div class="battlement-div" style="background:var(--bg)">
+  <div class="battlement-icon">Education</div>
+</div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="s-wrap">
+    <span class="s-pre">Academic Background</span>
+    <div class="s-head">EDUCA<span class="hi">TION</span></div>
+    <div class="edu-grid" id="edu-grid"></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="s-wrap">
+    <span class="s-pre">Honors &amp; Recognition</span>
+    <div class="s-head">ACHIEVE<span class="hi">MENTS</span></div>
+    <div class="ach-grid" id="ach-grid"></div>
+  </div>
+</section>
+
+<div class="battlement-div" style="background:var(--bg)">
+  <div class="battlement-icon">Resume</div>
+</div>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="s-wrap">
+    <span class="s-pre">Credentials</span>
+    <div class="s-head">MY<br/><span class="hi">RESUME</span></div>
+
+    <div class="resume-layout reveal">
+      <!-- Left: Live Resume Document -->
+      <div class="resume-doc">
+        <div class="resume-header">
+          <div class="resume-header-name">Abhay Kapoor</div>
+          <div class="resume-header-role">Full Stack Developer &middot; MCA Student</div>
+          <div class="resume-header-contacts">
+            <span class="rhc">abhaykapoor.008@gmail.com</span>
+            <span class="rhc">+91-934-897-4276</span>
+            <span class="rhc">github.com/Abhay14310</span>
+            <span class="rhc">Cuttack, Odisha</span>
+          </div>
+        </div>
+
+        <div class="resume-body">
+          <!-- Summary -->
+          <div class="resume-section">
+            <div class="resume-section-title">Profile</div>
+            <p style="font-size:.85rem;color:var(--dim);line-height:1.8;">
+              MCA student at Ravenshaw University (8.75 CGPA) specialising in full-stack web development, real-time systems, and computer vision. Lead developer of Tasuke'26 &mdash; a production-grade multi-domain SaaS platform. Passionate about immersive web technologies, CI/CD, and containerised microservices.
+            </p>
+          </div>
+
+          <!-- Experience -->
+          <div class="resume-section">
+            <div class="resume-section-title">Experience</div>
+
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">MCA Student &middot; Lead Developer</span>
+                <span class="r-exp-date">Sep 2024 &mdash; Present</span>
+              </div>
+              <div class="r-exp-co">Ravenshaw University, Cuttack</div>
+              <ul class="r-exp-bullets">
+                <li>Led 3-student team building Tasuke'26 &mdash; multi-domain SaaS with Docker, CI/CD, Socket.IO</li>
+                <li>Built computer vision pipeline (OpenCV + YOLO) achieving &lt;150ms real-time latency</li>
+                <li>Implemented Redis caching + bidirectional Socket.IO streaming</li>
+              </ul>
+            </div>
+
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">BSc CS Graduate &middot; Developer</span>
+                <span class="r-exp-date">Sep 2021 &mdash; May 2024</span>
+              </div>
+              <div class="r-exp-co">Gangadhar Meher University, Sambalpur</div>
+              <ul class="r-exp-bullets">
+                <li>Built E-Sports Nexus &mdash; tournament platform with Three.js 3D UI</li>
+                <li>Developed Community Q&amp;A with Node.js, Express.js, MySQL REST API</li>
+                <li>Defended thesis on Immersive Web Technologies &middot; Mentored 10+ students</li>
+              </ul>
+            </div>
+
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">Tech Fest Event Organizer</span>
+                <span class="r-exp-date">2023 &mdash; 2024</span>
+              </div>
+              <div class="r-exp-co">University Tech Fest</div>
+              <ul class="r-exp-bullets">
+                <li>Managed &#8377;50,000 INR budget &middot; Coordinated hackathon &amp; competitive programming events</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="resume-section">
+            <div class="resume-section-title">Key Projects</div>
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">Tasuke'26 &mdash; SaaS Platform</span>
+                <span class="r-exp-date" style="color:var(--sky)">React &middot; Node &middot; Docker &middot; OpenCV</span>
+              </div>
+              <ul class="r-exp-bullets">
+                <li>Multi-domain SaaS with computer vision, real-time pose classification &lt;150ms, Redis, Socket.IO</li>
+              </ul>
+            </div>
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">E-Sports Nexus</span>
+                <span class="r-exp-date" style="color:var(--sky)">Three.js &middot; HTML &middot; CSS &middot; JS</span>
+              </div>
+              <ul class="r-exp-bullets">
+                <li>Centralised tournament hosting platform with 3D animations and CMS</li>
+              </ul>
+            </div>
+            <div class="r-exp">
+              <div class="r-exp-header">
+                <span class="r-exp-role">Community Q&amp;A Platform</span>
+                <span class="r-exp-date" style="color:var(--sky)">Node &middot; Express &middot; MySQL &middot; EJS</span>
+              </div>
+              <ul class="r-exp-bullets">
+                <li>Full REST API with relational DB design and raw SQL optimisation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="resume-section">
+            <div class="resume-section-title">Technical Skills</div>
+            <div class="r-skills-grid">
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">React.js / JavaScript</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Node.js / Express.js</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">MongoDB / MySQL</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Docker / GitHub Actions</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Socket.IO / Redis</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Python / OpenCV / YOLO</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Three.js / WebGL</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">C / C++ / REST APIs</span></div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section">
+            <div class="resume-section-title">Education</div>
+            <div class="r-edu">
+              <div>
+                <div class="r-edu-deg">Master of Computer Applications (MCA)</div>
+                <div class="r-edu-school">Ravenshaw University, Cuttack</div>
+              </div>
+              <div style="text-align:right">
+                <div class="r-edu-grade">8.75 CGPA</div>
+                <div class="r-edu-school">2024 &mdash; Present</div>
+              </div>
+            </div>
+            <div class="r-edu">
+              <div>
+                <div class="r-edu-deg">BSc Computer Science</div>
+                <div class="r-edu-school">Gangadhar Meher University, Sambalpur</div>
+              </div>
+              <div style="text-align:right">
+                <div class="r-edu-grade">7.58 CGPA</div>
+                <div class="r-edu-school">2021 &mdash; 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div class="resume-section" style="margin-bottom:2.5rem">
+            <div class="resume-section-title">Achievements</div>
+            <div class="r-skills-grid">
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">3&times; University Badminton Champion</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Published Research Thesis</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">University Cricket Representative</span></div>
+              <div class="r-skill-item"><div class="r-skill-dot"></div><span class="r-skill-name">Mentored 10+ Students</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Action Panel -->
+      <div class="resume-panel">
+        <div class="resume-panel-card">
+          <div class="rp-title">Quick Stats</div>
+          <div class="rp-stat"><span class="rp-stat-label">Current Status</span><span class="rp-stat-val" style="color:var(--green)">Open to Work</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Experience</span><span class="rp-stat-val">3+ Years Dev</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Location</span><span class="rp-stat-val">Cuttack, Odisha</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">CGPA</span><span class="rp-stat-val" style="color:var(--gold)">8.75 / 10</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Stack</span><span class="rp-stat-val">MERN + Docker</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Speciality</span><span class="rp-stat-val">Full Stack + CV</span></div>
+        </div>
+
+        <div class="resume-panel-card">
+          <div class="rp-title">Download Resume</div>
+          <p style="font-size:.8rem;color:var(--dim);line-height:1.7;margin-bottom:1rem;">
+            Get the full PDF version of my resume with all details, references, and certifications.
+          </p>
+          <a href="#" class="btn-download" onclick="alert('Link your PDF here — update href to your resume URL')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
+            Download PDF
+          </a>
+          <a href="https://github.com/Abhay14310" target="_blank" class="btn-view-gh" style="margin-top:.8rem">
+            View GitHub &#8599;
+          </a>
+        </div>
+
+        <div class="resume-panel-card">
+          <div class="rp-title">Looking For</div>
+          <div class="rp-stat"><span class="rp-stat-label">Role</span><span class="rp-stat-val">Full Stack Dev</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Type</span><span class="rp-stat-val">Full-time / Intern</span></div>
+          <div class="rp-stat"><span class="rp-stat-label">Mode</span><span class="rp-stat-val">Remote / Hybrid</span></div>
+          <div style="margin-top:1rem">
+            <a href="mailto:abhaykapoor.008@gmail.com" class="btn-download" style="margin-top:0">
+              Contact Me &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="battlement-div" style="background:var(--bg2)">
+  <div class="battlement-icon">Contact</div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-wrap">
+    <div class="contact-giant">LET'S<br/>WORK<br/><span class="hi">TOGETHER</span></div>
+    <div class="contact-bar">
+      <div class="socials reveal">
+        <a href="https://github.com/Abhay14310" target="_blank" class="slink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub &mdash; Abhay14310
+        </a>
+        <a href="https://linkedin.com/in/" target="_blank" class="slink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn &mdash; abhaykapoor
+        </a>
+        <a href="mailto:abhaykapoor.008@gmail.com" class="slink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          abhaykapoor.008@gmail.com
+        </a>
+        <a href="tel:+919348974276" class="slink">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91-934-897-4276
+        </a>
+      </div>
+      <div class="contact-form reveal">
+        <div class="cf-group"><label>Your Name</label><input type="text" id="cf-name" placeholder="John Doe"/></div>
+        <div class="cf-group"><label>Email</label><input type="email" id="cf-email" placeholder="john@example.com"/></div>
+        <div class="cf-group"><label>Subject</label><input type="text" id="cf-sub" placeholder="Let's collaborate!"/></div>
+        <div class="cf-group"><label>Message</label><textarea id="cf-msg" placeholder="Tell me about your project or opportunity..."></textarea></div>
+        <button class="cf-submit" onclick="handleContact()">Send Message &rarr;</button>
+        <p id="cf-status" style="font-size:.78rem;color:var(--gold);margin-top:.5rem"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">&#9876; AK &#9876;</div>
+  <div class="f-copy">&copy; 2026 Abhay Kapoor &middot; Full Stack Developer &middot; Ravenshaw University</div>
+  <a href="https://github.com/Abhay14310" target="_blank" class="f-link">GitHub &#8599;</a>
+  <a href="www.linkedin.com/in/abhaykapoor2811" target="_blank" class="f-link">LinkedIn &#8599; </a>
+
+</footer>
+
+</body>
+</html>
