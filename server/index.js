@@ -19,11 +19,9 @@ app.use('/api/contact',  require('./routes/contact'));
 app.use('/api/messages', require('./routes/messages'));
 app.get('/api/health', (_,res)=>res.json({status:'OK',time:new Date()}));
 
-// Serve React in production
-if(process.env.NODE_ENV==='production'){
-  app.use(express.static(path.join(__dirname,'../client/build')));
-  app.get('*',(_,res)=>res.sendFile(path.join(__dirname,'../client/build/index.html')));
-}
+// Root route for backend status
+app.get('/', (_, res) => res.send('Abhay Kapoor Portfolio API is running.'));
+
 
 mongoose.connect(process.env.MONGO_URI)
   .then(()=>{

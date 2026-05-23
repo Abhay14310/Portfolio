@@ -229,9 +229,60 @@ const io = new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // Contact form handler
-function handleContact(){
-  document.getElementById('cf-status').textContent = '✦ Message sent! Connect to your Express backend at /api/contact';
+async function handleContact(){
+  const btn = document.querySelector('.cf-submit');
+  const status = document.getElementById('cf-status');
+  const nameVal = document.getElementById('cf-name').value.trim();
+  const emailVal = document.getElementById('cf-email').value.trim();
+  const subVal = document.getElementById('cf-sub').value.trim();
+  const msgVal = document.getElementById('cf-msg').value.trim();
+
+  if(!nameVal || !emailVal || !subVal || !msgVal){
+    status.textContent = '⚠️ Please fill out all fields.';
+    status.style.color = '#ff6b6b';
+    return;
+  }
+
+  try {
+    btn.disabled = true;
+    status.textContent = '✦ Sending message...';
+    status.style.color = 'var(--gold)';
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: nameVal,
+        email: emailVal,
+        subject: subVal,
+        message: msgVal
+      })
+    });
+
+    const data = await res.json();
+    if(res.ok && data.success){
+      status.textContent = '✦ Message sent successfully!';
+      status.style.color = '#2ecc71';
+      // Reset form fields
+      document.getElementById('cf-name').value = '';
+      document.getElementById('cf-email').value = '';
+      document.getElementById('cf-sub').value = '';
+      document.getElementById('cf-msg').value = '';
+    } else {
+      status.textContent = `❌ Error: ${data.message || 'Failed to send.'}`;
+      status.style.color = '#ff6b6b';
+    }
+  } catch(err) {
+    console.error(err);
+    status.textContent = '❌ Failed to send message. Please try again later.';
+    status.style.color = '#ff6b6b';
+  } finally {
+    btn.disabled = false;
+  }
 }
+
 
 // Custom cursor
 const cur=document.getElementById('cur'), curR=document.getElementById('cur-r');
