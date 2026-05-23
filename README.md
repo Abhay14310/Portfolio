@@ -2,32 +2,19 @@
 
 A Clash of Clans themed developer portfolio built with vanilla HTML/CSS/JS + Three.js.
 
-## 🚀 Deploy Options
+## 🚀 Deployment
 
-### Option 1 — Netlify (Easiest, Free)
-1. Go to [netlify.com](https://netlify.com) → New Site → Deploy manually
-2. Drag & drop the entire `deploy-portfolio` folder
-3. Done — live in 30 seconds ✅
+The portfolio is deployed to Vercel (both frontend and contact form backend serverless function).
 
-### Option 2 — Vercel (Free)
-1. Install: `npm i -g vercel`
-2. Run: `vercel` in this folder
-3. Follow prompts → Done ✅
-
-### Option 3 — GitHub Pages (Free)
-1. Push this folder to a GitHub repo
-2. Go to Settings → Pages → Source: main branch / root
-3. Live at `https://yourusername.github.io/repo-name` ✅
-
-### Option 4 — Static only (No backend needed)
-Just open `index.html` in any browser — works offline too.
-
-## 📬 Contact Form Backend (Optional)
-The contact form needs the Express server to actually send emails.
-- Set up `.env` from `.env.example`
-- `npm install` then `node server/index.js`
-- Deploy server to Render.com (free tier) using `render.yaml`
+### Deploying to Vercel
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` or `vercel --prod` to deploy.
+3. Configure the following Environment Variables in your Vercel Project Dashboard (Settings > Environment Variables):
+   * `MONGO_URI`: Your MongoDB Atlas connection string (to store contact submissions).
+   * `EMAIL_USER`: Your Gmail address (to send notifications).
+   * `EMAIL_PASS`: Your Gmail App Password (generated in Google Account settings).
+   * `EMAIL_TO`: The email address where you want to receive submissions.
 
 ## 📄 Resume PDF
-Replace the `#` in the Download PDF button with your actual hosted PDF link.
+Replace the `#` in the Download PDF button in `index.html` with your actual hosted PDF link.
 (Google Drive → Share → Anyone with link → Copy link)

@@ -5,9 +5,7 @@
     { "src": "*.css", "use": "@vercel/static" },
     { "src": "*.js", "use": "@vercel/static" },
     { "src": "*.jpg", "use": "@vercel/static" },
-    { "src": "*.png", "use": "@vercel/static" }
-  ],
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://abhay-portfolio-api.onrender.com/api/$1" }
+    { "src": "*.png", "use": "@vercel/static" },
+    { "src": "api/contact.js", "use": "@vercel/node" }
   ]
 }
