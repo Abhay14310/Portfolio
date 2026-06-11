@@ -77,6 +77,16 @@ const PROJECTS = [
     github:'https://github.com/Abhay14310/NexusIsland',
     live:'',
   },
+   {
+    num:'06', featured:false,
+    badge:'In Progress',
+    title:'Miorah Project',
+    desc:'Ongoing project exploring new frameworks and concepts. Building on MERN fundamentals with new architecture patterns.',
+    tags:['React','Node.js','MongoDB'],
+    img:'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&auto=format&fit=crop&q=80',
+    github:'https://github.com/Abhay14310/Miorah-project',
+    live:'',
+  },
 ];
 
 const EXPERIENCE = [
