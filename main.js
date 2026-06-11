@@ -35,7 +35,7 @@ const PROJECTS = [
     tags:['React','Node.js','MongoDB','Docker','OpenCV','YOLO','Socket.IO','Redis'],
     img:'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&auto=format&fit=crop&q=80',
     github:'https://github.com/Abhay14310',
-    live:'',
+    live:'https://tasuke26.vercel.app/',
   },
   {
     num:'02', featured:false,
@@ -45,7 +45,7 @@ const PROJECTS = [
     tags:['HTML','CSS','JavaScript','Three.js','Bootstrap'],
     img:'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80',
     github:'https://github.com/Abhay14310/NexusIsland',
-    live:'',
+    live:'https://nexusisland.vercel.app/',
   },
   {
     num:'03', featured:false,
@@ -75,16 +75,6 @@ const PROJECTS = [
     tags:['CSS','HTML','JavaScript'],
     img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80',
     github:'https://github.com/Abhay14310/NexusIsland',
-    live:'',
-  },
-  {
-    num:'06', featured:false,
-    badge:'In Progress',
-    title:'Miorah Project',
-    desc:'Ongoing project exploring new frameworks and concepts. Building on MERN fundamentals with new architecture patterns.',
-    tags:['React','Node.js','MongoDB'],
-    img:'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&auto=format&fit=crop&q=80',
-    github:'https://github.com/Abhay14310/Miorah-project',
     live:'',
   },
 ];
